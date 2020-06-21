@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Play Now</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/css/toastr.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="/js/toastr.min.js"></script>
+    <link href="/css/custom.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="row divider">
+      <div class="col-sm-3 col-xs-12">
+        <div class="logo">
+          <img class="logo-img" src="/images/logo.png" />
+        </div>
+      </div>
+
+      <div class="col-sm-9 col-xs-12">
+        <div class="row">
+          <div class="col-sm-3 col-xs-6">
+            <div class="goal-created header-statics">
+              <p>Current Draw Result</p>
+              <p class="c-played">Played: 222,111</p>
+              <p class="current-won">Won: 222,111</p>
+            </div>
+          </div>
+          <div class="col-sm-3 col-xs-6">
+            <div class="item-mastered header-statics">
+              <p>Current Day Result</p>
+              <p class="day-played">Played: 222,111</p>
+              <p class="day-won">Won: 222,111</p>
+            </div>
+          </div>
+          <div class="col-sm-3 col-xs-6">
+            <div class="item-studied header-statics">
+              <p>Played since 45 Days</p>
+              <p class="last-played">Played : 222,111</p>
+              <p class="last-won">Won: 222,111</p>
+            </div>
+          </div>
+          <div class="col-sm-3 col-xs-6">
+            <div class="login header-statics"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 col-xs-12">
+        <div class="tab">
+          <button
+            class="tablinks active"
+            onclick="openCityhtml(event, 'Tab-1')"
+          >
+            Completed
+          </button>
+          <button class="tablinks" onclick="openCityhtml(event, 'Tab-2')">
+            Upcoming
+          </button>
+        </div>
+        <div id="Tab-1" class="tabcontent" style="display: block;">
+          <div class="table-responsive" id="completed"></div>
+        </div>
+        <div id="Tab-2" class="tabcontent">
+          <div id="upcoming"></div>
+        </div>
+      </div>
+      <div class="col-sm-9 col-xs-12">
+        <div class="row">
+          <div class="col-sm-4 col-xs-12">
+            <div class="number-show-section">
+              <div class="ran-num">
+                <div>
+                  <img src="/images/sunset.jpg" />
+                </div>
+                <div class="g-r-s">
+                  <h4 class="ran-gen-num">Start Soon</h4>
+                </div>
+              </div>
+              <div>
+                <div id="app"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-5 col-xs-12">
+            <div class="result-table-1-section">
+              <div class="table-responsive">
+                <div class="table">
+                  <div class="table-data">
+                    <table class="" id="result-left-table">
+                      <tbody>
+                        <tr>
+                          <td class="l-1">1</td>
+                          <td class="l-2">2</td>
+                          <td class="l-3">3</td>
+                          <td class="l-5">4</td>
+                          <td class="l-5">5</td>
+                          <td class="l-6">6</td>
+                          <td class="l-7">7</td>
+                          <td class="l-8">8</td>
+                          <td class="l-9">9</td>
+                          <td class="l-10">10</td>
+                        </tr>
+                        <tr>
+                          <td class="l-11">11</td>
+                          <td class="l-12">12</td>
+                          <td class="l-13">13</td>
+                          <td class="l-14">14</td>
+                          <td class="l-15">15</td>
+                          <td class="l-16">16</td>
+                          <td class="l-17">17</td>
+                          <td class="l-18">18</td>
+                          <td class="l-19">19</td>
+                          <td class="l-20">20</td>
+                        </tr>
+                        <tr>
+                          <td class="l-21">21</td>
+                          <td class="l-22">22</td>
+                          <td class="l-23">23</td>
+                          <td class="l-24">24</td>
+                          <td class="l-25">25</td>
+                          <td class="l-26">26</td>
+                          <td class="l-27">27</td>
+                          <td class="l-28">28</td>
+                          <td class="l-29">29</td>
+                          <td class="l-30">30</td>
+                        </tr>
+                        <tr>
+                          <td class="l-31">31</td>
+                          <td class="l-32">32</td>
+                          <td class="l-33">33</td>
+                          <td class="l-34">34</td>
+                          <td class="l-35">35</td>
+                          <td class="l-36">36</td>
+                          <td class="l-37">37</td>
+                          <td class="l-38">38</td>
+                          <td class="l-39">39</td>
+                          <td class="l-40">40</td>
+                        </tr>
+                        <tr>
+                          <td class="l-41">41</td>
+                          <td class="l-42">42</td>
+                          <td class="l-43">43</td>
+                          <td class="l-44">44</td>
+                          <td class="l-45">45</td>
+                          <td class="l-46">46</td>
+                          <td class="l-47">47</td>
+                          <td class="l-48">48</td>
+                          <td class="l-49">49</td>
+                          <td class="l-50">50</td>
+                        </tr>
+                        <tr>
+                          <td class="l-51">51</td>
+                          <td class="l-52">52</td>
+                          <td class="l-53">53</td>
+                          <td class="l-54">54</td>
+                          <td class="l-55">55</td>
+                          <td class="l-56">56</td>
+                          <td class="l-57">57</td>
+                          <td class="l-58">58</td>
+                          <td class="l-59">59</td>
+                          <td class="l-60">60</td>
+                        </tr>
+                        <tr>
+                          <td class="l-61">61</td>
+                          <td class="l-62">62</td>
+                          <td class="l-63">63</td>
+                          <td class="l-64">64</td>
+                          <td class="l-65">65</td>
+                          <td class="l-66">66</td>
+                          <td class="l-67">67</td>
+                          <td class="l-68">68</td>
+                          <td class="l-69">69</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-xs-12">
+            <div class="result-table-2-section">
+              <div class="table-responsive">
+                <div class="table">
+                  <div class="table-data">
+                    <table class="w3-container w3-rest" id="result-right-table">
+                      <tbody>
+                        <tr>
+                          <td class="r-1">1</td>
+                          <td class="r-2">2</td>
+                          <td class="r-3">3</td>
+                          <td class="r-4">4</td>
+                          <td class="r-5">5</td>
+                        </tr>
+                        <tr>
+                          <td class="r-6">6</td>
+                          <td class="r-7">7</td>
+                          <td class="r-8">8</td>
+                          <td class="r-9">9</td>
+                          <td class="r-10">10</td>
+                        </tr>
+                        <tr>
+                          <td class="r-11">11</td>
+                          <td class="r-12">12</td>
+                          <td class="r-13">13</td>
+                          <td class="r-14">14</td>
+                          <td class="r-15">15</td>
+                        </tr>
+                        <tr>
+                          <td class="r-16">16</td>
+                          <td class="r-17">17</td>
+                          <td class="r-18">18</td>
+                          <td class="r-19">19</td>
+                          <td class="r-20">20</td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                          <td class="r-20">21</td>
+                          <td class="r-22">22</td>
+                          <td class="r-23">23</td>
+                          <td class="r-24">24</td>
+                        </tr>
+                        <tr>
+                          <td class="r-25">25</td>
+                          <td class="r-26">26</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 col-xs-12">
+        <div class="sidebar-lower-image">
+          <img src="/images/sunflower.jpg" />
+        </div>
+      </div>
+      <div class="col-sm-9 col-xs-12">
+        <div class="row">
+          <div class="col-sm-8 col-xs-12">
+            <div class="game-panel-header divider">
+              <p>Puzzle Game Info</p>
+            </div>
+            <div class="row divider">
+              <div class="col-xs-6 col-sm-3">
+                <select id="selectType">
+                  <option value="notSet">Select type</option>
+                  <option value="self" rel="icon-temperature">
+                    Self
+                  </option>
+                  <option value="generated">Random</option>
+                </select>
+              </div>
+              <div class="col-xs-6 col-sm-3">
+                <select id="numberOfBatchs">
+                  <option value="notSet">Number of Batches</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="col-xs-6 col-sm-3">
+                <select id="numberOfRows">
+                  <option value="notSet">No Rows</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                </select>
+              </div>
+              <div class="col-xs-6 col-sm-3">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  onclick="myCreateFunction()"
+                >
+                  Add Row
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-8 col-xs-12">
+                <div class="table-responsive">
+                  <div class="table tb-row">
+                    <div class="table-data1 mrgn-right">
+                      <table id="mytable" class="mytableClass">
+                        <tr>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>3</td>
+                          <td>4</td>
+                          <td>5</td>
+                          <td>6</td>
+                          <td>7</td>
+                          <td>8</td>
+                          <td>9</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>11</td>
+                          <td>12</td>
+                          <td>13</td>
+                          <td>14</td>
+                          <td>15</td>
+                          <td>16</td>
+                          <td>17</td>
+                          <td>18</td>
+                          <td>19</td>
+                          <td>20</td>
+                        </tr>
+                        <tr>
+                          <td>21</td>
+                          <td>22</td>
+                          <td>23</td>
+                          <td>24</td>
+                          <td>25</td>
+                          <td>26</td>
+                          <td>27</td>
+                          <td>28</td>
+                          <td>29</td>
+                          <td>30</td>
+                        </tr>
+                        <tr>
+                          <td>31</td>
+                          <td>32</td>
+                          <td>33</td>
+                          <td>34</td>
+                          <td>35</td>
+                          <td>36</td>
+                          <td>37</td>
+                          <td>38</td>
+                          <td>39</td>
+                          <td>40</td>
+                        </tr>
+                        <tr>
+                          <td>41</td>
+                          <td>42</td>
+                          <td>43</td>
+                          <td>44</td>
+                          <td>45</td>
+                          <td>46</td>
+                          <td>47</td>
+                          <td>48</td>
+                          <td>49</td>
+                          <td>50</td>
+                        </tr>
+                        <tr>
+                          <td>51</td>
+                          <td>52</td>
+                          <td>53</td>
+                          <td>54</td>
+                          <td>55</td>
+                          <td>56</td>
+                          <td>57</td>
+                          <td>58</td>
+                          <td>59</td>
+                          <td>60</td>
+                        </tr>
+                        <tr>
+                          <td>61</td>
+                          <td>62</td>
+                          <td>63</td>
+                          <td>64</td>
+                          <td>65</td>
+                          <td>66</td>
+                          <td>67</td>
+                          <td>68</td>
+                          <td>69</td>
+                        </tr>
+                        <!-- <tr> -->
+                        <!-- <td class="pointerEventNone"></td> -->
+                        <!-- <td class="pointerEventNone"></td> -->
+                        <!-- <td class="pointerEventNone"></td> -->
+                        <!-- </tr> -->
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-xs-12">
+                <div class="table-responsive table-data1">
+                  <table id="mytable2" class="mytableClass2">
+                    <tr>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>12</td>
+                      <td>13</td>
+                      <td>14</td>
+                      <td>15</td>
+                    </tr>
+                    <tr>
+                      <td>16</td>
+                      <td>17</td>
+                      <td>18</td>
+                      <td>19</td>
+                      <td>20</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                      <td>21</td>
+                      <td>22</td>
+                      <td>23</td>
+                      <td>24</td>
+                      <td>25</td>
+                    </tr>
+                    <tr>
+                      <td>26</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="game-panel">
+              <div class="game-input-section"></div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="result-section">
+              <div class="game-panel-header">
+                <p>Puzzle Game Result</p>
+              </div>
+              <div class="result-table">
+                <div class="table-responsive">
+                  <div class="table">
+                    <div class="table-data2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Login model-->
+    <div class="modal" tabindex="-1" role="dialog" id="loginModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="login-form">
+              <h2 class="text-center">Log in</h2>
+              <p class="allerror"></p>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control email"
+                  placeholder="Email"
+                  required="required"
+                />
+                <p class="emailError"></p>
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control password"
+                  placeholder="Password"
+                  required="required"
+                />
+                <p class="passwordError"></p>
+              </div>
+              <div class="form-group">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block loginSubmit"
+                >
+                  Log in
+                </button>
+              </div>
+              <div class="clearfix">
+                <a href="#" class="pull-right forgetPasswordButton"
+                  >Forgot Password?</a
+                >
+              </div>
+              <p class="text-center">
+                <a href="#" class="signup">Create an Account</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of login model-->
+    <!--signUp model-->
+    <div class="modal" tabindex="-1" role="dialog" id="signupModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="login-form">
+              <h2 class="text-center">Sign Up</h2>
+              <p class="allerror"></p>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control s-email"
+                  placeholder="email"
+                  required="required"
+                />
+                <p class="emailError"></p>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control s-fullname"
+                  placeholder="Full Name"
+                  required="required"
+                />
+                <p class="fullnameError"></p>
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control s-password"
+                  placeholder="Password"
+                  required="required"
+                />
+                <p class="passwordError"></p>
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control confirmPassword"
+                  placeholder="Confirm Password"
+                  required="required"
+                />
+                <p class="confirmPasswordError"></p>
+              </div>
+              <div class="form-group">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block signupSubmit"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of sign up model-->
+    <!--forget Password model-->
+    <div class="modal" tabindex="-1" role="dialog" id="forgetPasswordModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="login-form">
+              <h2 class="text-center">Forget Password</h2>
+              <p class="allerror"></p>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control f-email"
+                  placeholder="email"
+                  required="required"
+                />
+                <p class="emailError"></p>
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control f-password"
+                  placeholder="Password"
+                  required="required"
+                />
+                <p class="passwordError"></p>
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control f-confirmPassword"
+                  placeholder="Confirm Password"
+                  required="required"
+                />
+                <p class="confirmPasswordError"></p>
+              </div>
+              <div class="form-group">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block changePasswordSubmitButton"
+                >
+                  Change Password
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of forget password model-->
+
+    <!--buy plan model-->
+    <div class="modal" tabindex="-1" role="dialog" id="planModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <h2 class="text-center">Select Plan</h2>
+          <p class="allerror"></p>
+          <div class="modal-body plan-body">
+            <div class="columns">
+              <ul class="price">
+                <li class="header">Basic</li>
+                <li class="grey">$ 5</li>
+                <li class="grey">7 days</li>
+                <li class="grey buy-b">
+                  <button class="b-button basic" onclick="buyPlan('basic')">
+                    Buy
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <div class="columns">
+              <ul class="price">
+                <li class="header" style="background-color: #4caf50;">Pro</li>
+                <li class="grey">$ 10</li>
+                <li class="grey">30 days</li>
+                <li class="grey buy-p">
+                  <button class="b-button pro" onclick="buyPlan('pro')">
+                    Buy
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of buy plan model-->
+    <script src="/js/moment.min.js"></script>
+    <script src="/js/js.js"></script>
+    <script>
+      function openCityhtml(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          // tablinks[0].className += " active";
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>
