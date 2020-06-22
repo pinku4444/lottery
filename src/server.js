@@ -50,7 +50,7 @@ class Server {
             res.render('index', { payment: 'not' });
         });
 
-        app.listen(port, () => {
+        app.listen(80, () => {
             console.log(`App is Running at ${port}`)
         })
         app.use(notFoundRoute);
