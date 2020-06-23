@@ -49,7 +49,7 @@ class GameController {
             let date = Date.now();
             let todayDate = getFormattedDate(date);
             console.log('todayDate: ', todayDate);
-            const data = await ResultModel.findOne({ where: { DRAWNO: drawNumber, DATE: todayDate } })
+            const data = await ResultModel.findOne({ where: { DRAWNO: drawNumber, DATE: moment().format('YYYY-MM-DD') } })
             if (!data) {
                 const response = { statusCode: errorCode.internal_server_error, msg: "Something went wrong" };
                 next(response);
