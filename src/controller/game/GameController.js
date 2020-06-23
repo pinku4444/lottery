@@ -21,7 +21,9 @@ class GameController {
                 iData.sort(function (a, b) { return a - b });
                 iData[5] = Math.floor(Math.random() * 30) + 1;
                 iData = iData.toString();
-                await ResultModel.create({ DATE: todayDate, DRAWNO: i, SYSTEM_GEN_NUMS: iData });
+                await ResultModel.create({
+                    DATE: moment().format('YYYY-MM-DD'), DRAWNO: i, SYSTEM_GEN_NUMS: iData
+                });
             }
             const response = {
                 status: 'ok',
